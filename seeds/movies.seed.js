@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+
 const Movie = require("../models/Movie.model")
 
 mongoose.connect("mongodb://localhost/lab-express-cinema")
@@ -6,6 +7,7 @@ mongoose.connect("mongodb://localhost/lab-express-cinema")
         console.log("connected")
     })
     .catch(err => console.log(err))
+
 const movies = [
     {
       title: "A Wrinkle in Time",
