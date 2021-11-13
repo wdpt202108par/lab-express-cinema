@@ -84,4 +84,16 @@ const movies = [
 ];
   // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
 
+const mongoose = require('mongoose');
+const Movies = require('../models/Movie.model.js');
+
+mongoose.connect('mongodb://localhost/lab-express-cinema')
+movie.create(movies)
+.then(function (movieList){
+    console.log('connected to mongodb!');
+    mongoose.connection.close()
+})
+.catch (err => {
+    console.log(err);
+})
   // ... your code here
