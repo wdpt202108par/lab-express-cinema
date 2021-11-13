@@ -86,9 +86,10 @@ const movies = [
 
 const mongoose = require('mongoose');
 const Movies = require('../models/Movie.model.js');
-
 mongoose.connect('mongodb://localhost/lab-express-cinema')
-movie.create(movies)
+
+
+Movies.create(movies)
 .then(function (movieList){
     console.log('connected to mongodb!');
     mongoose.connection.close()
