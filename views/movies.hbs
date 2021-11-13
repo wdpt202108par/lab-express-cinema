@@ -1,11 +1,12 @@
-This is the movies page
-
+<h1>This is the movies page</h1>
 <ul>
     {{#each mymovie}}
-    <li>
+    <div>
+        <li>
         <p>{{this.title}}</p>
-        <p>{{this.image}}</p>
-
+        <img src="{{this.image}}">
+        <a href = "">see more</a>
     </li>
+    </div>
     {{/each}}
 </ul>
