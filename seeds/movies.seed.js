@@ -3,10 +3,10 @@ const mongoose = require("mongoose")
 const Movie = require("../models/Movie.model")
 
 mongoose.connect("mongodb://localhost/lab-express-cinema")
-    .then(function(){
-        console.log("connected")
-    })
-    .catch(err => console.log(err))
+  .then(function(){
+    console.log("connected")
+  })
+  .catch(err => console.log(err))
 
 const movies = [
     {
@@ -92,8 +92,8 @@ const movies = [
   ];
 
 Movie.create(movies)
-    .then(function(moviesFromDb){
-        console.log("movies created")
-        mongoose.connection.close()
-    })
-    .catch(err => console.log(err))
+  .then(function(moviesFromDb){
+    console.log("movies created")
+    mongoose.connection.close()
+  })
+  .catch(err => console.log(err))
